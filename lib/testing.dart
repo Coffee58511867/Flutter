@@ -38,7 +38,13 @@ class Testing extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/dashboard');
               },
-              child: const Text("Submit Form"))
+              child: const Text("Submit Form")),
+          OutlinedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/dashboard');
+              },
+              child: const Text("Submit Form")),
+          Switch(value: true, onChanged: (bool newBool) {})
         ],
       ),
       floatingActionButton: FloatingActionButton(

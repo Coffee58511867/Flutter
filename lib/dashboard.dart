@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/home.dart';
+import 'package:my_app/main.dart';
+import 'package:my_app/testing.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -19,13 +21,14 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
+  List<Widget> pages = [const Home(), const SecondScreen(), const Testing()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboard"),
       ),
-      body: const Home(),
+      body: pages[currentPage],
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
