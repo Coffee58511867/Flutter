@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/bottomnav.dart';
 import 'package:my_app/dashboard.dart';
 import 'package:my_app/forms.dart';
+import 'package:my_app/register.dart';
 import 'package:my_app/testing.dart';
 import 'package:my_app/third_screen.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         '/dashboard': (context) => const BottomNavigation(),
         '/dashboard2': (context) => const Dashboard(),
         '/testing': (context) => const Testing(),
-        '/register': (context) => const Forms(),
+        '/login': (context) => const Forms(),
+        '/register': (context) => const CreateAccount(),
       },
     );
   }
@@ -41,9 +43,14 @@ class FirstScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Register Here'),
+          style: ButtonStyle(
+            fixedSize: MaterialStateProperty.all<Size>(
+              const Size(200, 30),
+            ),
+          ),
+          child: const Text('Login Here'),
           onPressed: () {
-            Navigator.pushNamed(context, '/testing');
+            Navigator.pushNamed(context, '/login');
           },
         ),
       ),
