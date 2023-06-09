@@ -85,6 +85,17 @@ class _SigninState extends State<Signin> {
           children: [
             TextField(
               controller: emailController,
+              onChanged: (value) {
+                if (value.isEmpty) {
+                  setState(() {
+                    emailErrorText = 'Email is required';
+                  });
+                } else {
+                  setState(() {
+                    emailErrorText = null;
+                  });
+                }
+              },
               decoration: InputDecoration(
                 labelText: 'Email',
                 errorText: emailErrorText,
@@ -93,6 +104,22 @@ class _SigninState extends State<Signin> {
             const SizedBox(height: 16.0),
             TextField(
               controller: passwordController,
+              onChanged: (value) {
+                if (value.isEmpty) {
+                  setState(() {
+                    passwordErrorText = 'Password is required';
+                  });
+                } else if (value.length < 8) {
+                  setState(() {
+                    passwordErrorText =
+                        'Password should be at least 8 characters long';
+                  });
+                } else {
+                  setState(() {
+                    passwordErrorText = null;
+                  });
+                }
+              },
               decoration: InputDecoration(
                 labelText: 'Password',
                 errorText: passwordErrorText,
