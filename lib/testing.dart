@@ -17,23 +17,28 @@ class Testing extends StatelessWidget {
             color: Colors.black,
           ),
           Container(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.all(10.0),
             margin: const EdgeInsets.all(10.0),
             color: Colors.blue,
             child: const Text("Hello Your Updates are here"),
           ),
           Container(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.all(10.0),
             margin: const EdgeInsets.all(10.0),
             color: Colors.blue,
             child: const Text("Hello Your Updates are here"),
           ),
           Container(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.all(10.0),
             margin: const EdgeInsets.all(10.0),
             color: Colors.blue,
             child: const Text("Hello Your Updates are here"),
           ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/dashboard');
+              },
+              child: const Text("Submit Form"))
         ],
       ),
       floatingActionButton: FloatingActionButton(
