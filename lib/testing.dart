@@ -11,8 +11,24 @@ class Testing extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text("Your Updates Here"),
+      body: Column(
+        children: <Widget>[
+          Container(
+            padding: const EdgeInsets.all(30.0),
+            color: Colors.blue,
+            child: const Text("Hello Your Updates are here"),
+          ),
+          Container(
+            padding: const EdgeInsets.all(30.0),
+            color: Colors.blue,
+            child: const Text("Hello Your Updates are here"),
+          ),
+          Container(
+            padding: const EdgeInsets.all(30.0),
+            color: Colors.blue,
+            child: const Text("Hello Your Updates are here"),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
