@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/home.dart';
 import 'package:my_app/main.dart';
 import 'package:my_app/testing.dart';
+import 'package:my_app/third_screen.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -21,19 +22,24 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
-  List<Widget> pages = [const Home(), const SecondScreen(), const Testing()];
+  List<Widget> pages = [
+    const Home(),
+    const ThirdScreen(),
+    const Testing(),
+    const Home(),
+    const SecondScreen()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-      ),
       body: pages[currentPage],
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
-          NavigationDestination(icon: Icon(Icons.search), label: 'Search')
+          NavigationDestination(icon: Icon(Icons.search), label: 'Search'),
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
         ],
         onDestinationSelected: (int index) {
           setState(() {
