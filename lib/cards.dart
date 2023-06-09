@@ -10,3 +10,21 @@ class Card extends StatelessWidget {
     );
   }
 }
+
+class CardPage extends StatelessWidget {
+  const CardPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Row(children: [
+            Expanded(
+              child: Card(),
+            ),
+            SizedBox(width: 16.0),
+          ])),
+    );
+  }
+}
