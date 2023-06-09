@@ -30,6 +30,11 @@ class Register extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              "Create An Account",
+              style: TextStyle(fontSize: 23.0),
+            ),
+            const SizedBox(height: 16.0),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Full Names',
