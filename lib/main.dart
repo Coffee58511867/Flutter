@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/bottomnav.dart';
 import 'package:my_app/dashboard.dart';
 import 'package:my_app/forms.dart';
+import 'package:my_app/login.dart';
 import 'package:my_app/register.dart';
 import 'package:my_app/testing.dart';
 import 'package:my_app/third_screen.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/testing': (context) => const Testing(),
         '/login': (context) => const Forms(),
         '/register': (context) => const CreateAccount(),
+        '/signin': (context) => const LoginPage(),
       },
     );
   }
@@ -57,7 +59,7 @@ class FirstScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[100],
         onPressed: () {
-          Navigator.pushNamed(context, '/register');
+          Navigator.pushNamed(context, '/signin');
         },
         child: const Icon(Icons.add),
       ),
