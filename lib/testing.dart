@@ -11,6 +11,9 @@ class Testing extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
+      body: const Center(
+        child: Text("Your Updates Here"),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/second');
