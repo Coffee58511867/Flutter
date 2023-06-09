@@ -13,18 +13,24 @@ class Testing extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
+          const Divider(
+            color: Colors.black,
+          ),
           Container(
             padding: const EdgeInsets.all(30.0),
+            margin: const EdgeInsets.all(10.0),
             color: Colors.blue,
             child: const Text("Hello Your Updates are here"),
           ),
           Container(
             padding: const EdgeInsets.all(30.0),
+            margin: const EdgeInsets.all(10.0),
             color: Colors.blue,
             child: const Text("Hello Your Updates are here"),
           ),
           Container(
             padding: const EdgeInsets.all(30.0),
+            margin: const EdgeInsets.all(10.0),
             color: Colors.blue,
             child: const Text("Hello Your Updates are here"),
           ),
