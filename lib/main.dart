@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/bottom_nav.dart';
 import 'package:my_app/dashboard.dart';
+import 'package:my_app/testing.dart';
 import 'package:my_app/third_screen.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/third': (context) => const ThirdScreen(),
         '/dashboard': (context) => const BottomNav(),
         '/dashboard2': (context) => const Dashboard(),
+        '/testing': (context) => const Testing(),
       },
     );
   }
@@ -39,7 +41,7 @@ class FirstScreen extends StatelessWidget {
         child: ElevatedButton(
           child: const Text('Next Page'),
           onPressed: () {
-            Navigator.pushNamed(context, '/second');
+            Navigator.pushNamed(context, '/testing');
           },
         ),
       ),
