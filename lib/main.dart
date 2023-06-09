@@ -41,6 +41,12 @@ class FirstScreen extends StatelessWidget {
           },
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.pushNamed(context, '/dashboard');
+        },
+      ),
     );
   }
 }

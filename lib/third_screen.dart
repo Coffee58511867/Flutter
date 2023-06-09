@@ -11,7 +11,26 @@ class ThirdScreen extends StatelessWidget {
         backgroundColor: Colors.red[100],
         centerTitle: true,
       ),
-      body: const Center(child: Text('Third Screen')),
+      body: ListView(
+        children: const [
+          ListTile(
+            leading: Icon(Icons.facebook),
+            title: Text("Facebook"),
+          ),
+          ListTile(
+            leading: Icon(Icons.facebook),
+            title: Text("Facebook"),
+          ),
+          ListTile(
+            leading: Icon(Icons.settings),
+            title: Text("Settings"),
+          ),
+          ListTile(
+            leading: Icon(Icons.call),
+            title: Text("Call"),
+          )
+        ],
+      ),
     );
   }
 }
