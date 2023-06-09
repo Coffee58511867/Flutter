@@ -43,6 +43,7 @@ class FirstScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
+        backgroundColor: Colors.red[100],
         onPressed: () {
           Navigator.pushNamed(context, '/dashboard');
         },
