@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/bottom_nav.dart';
+import 'package:my_app/dashboard.dart';
 import 'package:my_app/third_screen.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/second': (context) => const SecondScreen(),
         '/third': (context) => const ThirdScreen(),
         '/dashboard': (context) => const BottomNav(),
+        '/dashboard2': (context) => const Dashboard(),
       },
     );
   }
@@ -44,7 +46,7 @@ class FirstScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[100],
         onPressed: () {
-          Navigator.pushNamed(context, '/dashboard');
+          Navigator.pushNamed(context, '/dashboard2');
         },
         child: const Icon(Icons.add),
       ),
