@@ -26,7 +26,7 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(32.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -87,6 +87,18 @@ class Register extends StatelessWidget {
               child: const Text('Login Here'),
               onPressed: () {
                 Navigator.pushNamed(context, '/login');
+              },
+            ),
+            const SizedBox(height: 16.0),
+            ElevatedButton(
+              style: ButtonStyle(
+                fixedSize: MaterialStateProperty.all<Size>(
+                  const Size(200, 30),
+                ),
+              ),
+              child: const Text('Dashboard'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/dashboard2');
               },
             ),
           ],
