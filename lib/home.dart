@@ -5,6 +5,13 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Column(children: [
+        Text(
+          "Good Morning",
+          style: TextStyle(fontSize: 30.0),
+        ),
+      ]),
+    );
   }
 }

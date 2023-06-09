@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/home.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -24,12 +25,12 @@ class _RootPageState extends State<RootPage> {
       appBar: AppBar(
         title: const Text("Dashboard"),
       ),
+      body: const Home(),
       bottomNavigationBar: NavigationBar(
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home')
+          NavigationDestination(icon: Icon(Icons.search), label: 'Search')
         ],
         onDestinationSelected: (int index) {
           setState(() {
